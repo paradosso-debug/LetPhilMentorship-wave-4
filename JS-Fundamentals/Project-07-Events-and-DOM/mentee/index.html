@@ -8,26 +8,44 @@
     <!-- ➤ Make the text bold and red (or any bright color you like) -->
     <!-- ➤ We’ll add this class dynamically with JavaScript -->
     <style>
-      /* TODO: Add .highlight class here */
+      .highlight {
+        font-weight: bold;
+        color: red;
+      }
     </style>
   </head>
   <body>
     <!-- 🧱 STEP 2: Add a heading with an id="title" -->
     <!-- ➤ Just a title for the page; we won't use it in JavaScript -->
 
+    <h1 id="title">Heading</h1>
+
     <!-- 🔘 STEP 3: Add 3 buttons, each for a different selector -->
     <!-- ➤ Button 1: NO id or class (we’ll grab it by tag name) -->
     <!-- ➤ Button 2: Give it id="btnById" -->
     <!-- ➤ Button 3: Give it class="btnByClass" -->
 
+    <button>Primary Button (querySelector)</button>
+    <button id="btnById">Secondary Button (getElementById)</button>
+    <button class="btnByClass">Danger Button (getElementByClassName)</button>
+
     <!-- 💬 STEP 4: Add two <p> elements for messages -->
     <!-- ➤ First one: id="message" for the Primary button -->
     <!-- ➤ Second one: id="message2" for the Secondary button -->
 
+    <p id="message">Waiting for Primary button click</p>
+    <p id="message2">Waiting for Secondary button click</p>
+
     <!-- 📋 STEP 5: Add a <ul> list with at least 2 <li> items -->
     <!-- ➤ We'll count how many <li> items exist using JavaScript -->
+    <ul>
+      <li>Item One</li>
+      <li>Item Two</li>
+    </ul>
 
     <!-- ⚙️ STEP 6: Link your JavaScript file at the very bottom -->
     <!-- ➤ Use: <script src="script.js"></script> -->
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -11,6 +11,10 @@
      ➤ Call it dangerBtn
 */
 
+const primaryBtn = document.querySelector("button");
+const secondaryBtn = document.getElementById("btnById");
+const dangerBtn = document.getElementsByClassName("btnByClass")[0];
+
 /*
 📦 STEP 2: Grab other DOM elements you’ll need
 
@@ -20,12 +24,27 @@
 - Get all <button> elements → use querySelectorAll("button"), store in allButtonsNL
 */
 
+const message = document.getElementById("message");
+const messageTwo = document.getElementById("message2");
+const listItems = document.getElementsByTagName("li");
+const allButtonsNL = document.querySelectorAll("button");
+
 /*
 🖨️ STEP 3: Console check
 
 Log each of the variables from Step 1 and Step 2 to make sure everything is selected properly
 Use console.log() to check your work!
 */
+
+console.log({
+  primaryBtn,
+  secondaryBtn,
+  dangerBtn,
+  message,
+  messageTwo,
+  listItems,
+  allButtonsNL,
+});
 
 /*
 💡 STEP 4: Create 4 functions
