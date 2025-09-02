@@ -1,10 +1,3 @@
-// STEP 1: Create a global variable and log it
-// STEP 2: Create a function with a local variable and log it inside
-// STEP 3: Try logging a local variable outside its function (expect error)
-// STEP 4: Call a function before it’s defined (hoisting)
-// STEP 5: Declare a variable after logging it (shows undefined)
-// STEP 6: Compare var, let, and const scoping
-
 // =============================================================
 // Project 10 – Scope & Hoisting (Mentee Version)
 // Complete each step with your own code
@@ -15,11 +8,18 @@
 // Store it in a variable called secret using const
 // Log the secret number to the console for testing
 
+const secret = Math.floor(Math.random() * 10) + 1;
+console.log(secret);
+
 // ---------- STEP 2: Select DOM elements ----------
 // Use getElementById to grab:
 // - the input field (id="guessInput")
 // - the button (id="guessBtn")
 // - the message paragraph (id="message")
+
+const guessInput = document.getElementById("guessInput");
+const guessBtn = document.getElementById("guessBtn");
+const message = document.getElementById("message");
 
 // ---------- STEP 3: Add a click event listener to the button ----------
 // Inside the function:
@@ -28,6 +28,15 @@
 // - Compare it to the secret number
 // - If it matches, update message.innerText to say "You win!"
 // - If not, say "Try again."
+
+guessBtn.addEventListener("click", function () {
+  const userGuess = Number(guessInput.value);
+  if (userGuess === secret) {
+    message.innerText = "You win!";
+  } else {
+    message.innerText = "Try again.";
+  }
+});
 
 // ---------- STEP 4: Try moving the secret number INSIDE the click event function ----------
 // What changes? Does it reset every time?
