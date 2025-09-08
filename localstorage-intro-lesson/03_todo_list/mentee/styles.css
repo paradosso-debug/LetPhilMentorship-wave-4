@@ -1,0 +1,16 @@
+/* Basic styles for layout */
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+input {
+  padding: 0.5rem;
+  width: 200px;
+  margin-right: 0.5rem;
+}

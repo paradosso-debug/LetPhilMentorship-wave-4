@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ✅ STEP 1: Define the character set to support all standard characters -->
+    <meta charset="UTF-8" />
+
+    <!-- ✅ STEP 2: Make sure the page scales well on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ STEP 3: Set the title shown in the browser tab -->
+    <title>Save Username</title>
+
+    <!-- ✅ STEP 4: Link to external CSS for layout and styling -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ✅ STEP 5: Create a container to wrap the app UI
+       - This keeps the layout organized and centers content
+       - The class "container" is referenced for styling if needed -->
+
+    <!-- ✅ STEP 6: Add a text input where the user will type their name
+         - <input> lets the user type something
+         - type="text" means it's a single-line text box
+         - id="nameInput" is used in JavaScript to select this element
+         - placeholder gives a helpful hint inside the box -->
+
+    <!-- ✅ STEP 7: Add a button that saves the name to localStorage
+         - <button> is clickable
+         - id="saveBtn" is used in JavaScript to listen for clicks
+         - The visible text should say what it does -->
+
+    <!-- ✅ STEP 8: Add a paragraph to display the saved name
+         - <p> is a generic text element
+         - id="userDisplay" is used in JavaScript to update the text
+         - Starts empty and gets filled when a name is saved -->
+
+    <!-- ✅ STEP 9: Link to the external JavaScript file
+       - Placing it at the end ensures the HTML loads first
+       - src="script.js" connects to your logic for saving/displaying the name -->
+
+    <div class="container">
+      <input type="text" placeholder="enter your name" id="nameInput" />
+      <button id="saveBtn">Saves the name</button>
+      <p id="userDisplay"></p>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

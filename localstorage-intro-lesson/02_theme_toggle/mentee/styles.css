@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #888;
+}
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+input {
+  padding: 0.5rem;
+  width: 200px;
+  margin-right: 0.5rem;
+}

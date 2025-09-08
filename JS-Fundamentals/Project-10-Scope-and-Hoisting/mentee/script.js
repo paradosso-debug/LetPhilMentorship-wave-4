@@ -47,10 +47,19 @@ guessBtn.addEventListener("click", function () {
 
 // A. Create a global variable and log it
 
+let random = "random words";
+console.log(random);
+
 // B. Create a function with a local variable
 // - Log the variable inside the function
 // - Try logging it outside the function (it should cause an error)
 
+function local() {
+  let myName = "Dylan";
+  console.log(myName);
+}
+
+local();
 // =============================================================
 // BONUS 2: Hoisting Demo
 // =============================================================
@@ -58,7 +67,28 @@ guessBtn.addEventListener("click", function () {
 // A. Call a function before it’s declared (this should work)
 // - Define a simple function using function declaration syntax
 
+hoisting();
+
+function hoisting() {
+  console.log("Hoisting this function");
+}
+
 // B. Try logging a var before it’s declared (should log undefined)
 
 // C. Try logging a let before it's declared (should cause ReferenceError)
 // - Uncomment the line to test the error
+
+startGame();
+
+function startGame() {
+  showWelcome();
+  setUpBoard();
+}
+
+function showWelcome() {
+  console.log("welcome");
+}
+
+function setUpBoard() {
+  console.log("setting up board");
+}
