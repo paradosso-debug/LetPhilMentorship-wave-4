@@ -13,3 +13,7 @@
 // - When clicked, toggle the "dark" class on the body
 // - Save the new theme ("dark" or "light") to localStorage
 // - Update the icon to reflect the current theme
+
+const toggleBtn = document.getElementById("toggleThemeBtn");
+const themeIcon = document.getElementById("themeIcon");
+const body = document.body;

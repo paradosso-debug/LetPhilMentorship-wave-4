@@ -3,7 +3,14 @@ body {
   padding: 2rem;
   background-color: #f4f4f4;
 }
-input, button, select {
+input,
+button,
+select {
   margin: 0.5rem 0;
   padding: 0.5rem;
+}
+
+body.dark {
+  background: #121212;
+  color: #ffffff;
 }

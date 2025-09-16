@@ -4,7 +4,7 @@
 // - Select the reset button with id="resetBtn"
 // Write your code here
 
-const checkbox = document.getElementById("subscribeCheckBox");
+const checkbox = document.getElementById("subscribeCheckbox");
 const statusText = document.getElementById("statusText");
 const resetBtn = document.getElementById("resetBtn");
 
@@ -15,6 +15,19 @@ const resetBtn = document.getElementById("resetBtn");
 // - Update the statusText to show "Subscribed ✅" or "Not subscribed ❌"
 // Write your code here
 
+const isChecked = localStorage.getItem("isSubscribed") === "true";
+checkbox.checked = isChecked;
+
+if (isChecked) {
+  statusText.textContent = "Subscribed ✅";
+} else {
+  statusText.textContent = "Not subscribed ❌";
+}
+
+// statusText.textContent = isChecked ? "Subsribed ✅" : "Not subscribed ❌"
+
+// condtion ? value is true? : value is false
+
 // 🎯 STEP 3: UPDATE STATE WHEN CHECKBOX CHANGES
 // - Add a "change" event listener to the checkbox
 // Inside the listener:
@@ -22,6 +35,17 @@ const resetBtn = document.getElementById("resetBtn");
 //   - Update the status paragraph text accordingly
 //   - Update aria-pressed for accessibility ("true" or "false")
 // Write your code here
+
+checkbox.addEventListener("change", () => {
+  localStorage.setItem("isSubscribed", checkbox.checked);
+  if (checkbox.checked) {
+    statusText.textContent = "Subscribed ✅";
+    checkbox.setAttribute("aria-pressed", "true");
+  } else {
+    statusText.textContent = "Not subscribed ❌";
+    checkbox.setAttribute("aria-pressed", "false");
+  }
+});
 
 // 🔄 STEP 4: RESET FUNCTIONALITY
 // - Add a "click" event listener to the reset button
@@ -31,3 +55,10 @@ const resetBtn = document.getElementById("resetBtn");
 //   - Reset the statusText to "Not subscribed ❌"
 //   - Reset aria-pressed to "false"
 // Write your code here
+
+resetBtn.addEventListener("click", () => {
+  localstorage.removeItem("isSubscribed");
+  checkbox.checked = false;
+  statusText.textContent = "Not subscribed ❌";
+  checkbox.setAttribute = ("aria-pressed", "false");
+});
