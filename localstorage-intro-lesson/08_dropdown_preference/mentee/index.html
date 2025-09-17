@@ -1,38 +1,64 @@
-<!-- Dropdown Language Preference -->
-
-<!-- ✅ STEP 1: Define the character encoding with:
-         <meta charset="UTF-8" /> -->
-
-<!-- ✅ STEP 2: Make the layout responsive on all screen sizes with:
-         <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-
-<!-- ✅ STEP 3: Set the browser tab title with:
-         <title>Dropdown Language Preference</title> -->
-
-<!-- ✅ STEP 4: Link to your external stylesheet with:
-         <link rel="stylesheet" href="styles.css" /> -->
-
-<!-- ✅ STEP 5: Add a <label> for the dropdown
-         - Use <label for="languageSelect">Choose your language:</label>
-         - Make sure the "for" matches the id on the <select> -->
-
-<!-- ✅ STEP 6: Add the <select> element
-         - Give it id="languageSelect"
-         - Inside, create several <option> elements
-           - Example: <option value="en">English</option>
-           - The "value" is what gets saved in localStorage
-           - The visible text is what the user sees in the dropdown -->
-
-<!-- ✅ STEP 7: At the bottom of <body>, link your JavaScript file with:
-         <script src="script.js"></script> -->
-
+<!-- Dropdown Language Preference - Mentee Version (HTML) -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ✅ STEP 1: Add the page’s character set so text renders correctly -->
     <meta charset="UTF-8" />
+
+    <!-- ✅ STEP 2: Make the layout responsive on phones/tablets/desktops -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ STEP 3: Set the text that appears on the browser tab -->
     <title>Dropdown Language Preference</title>
+
+    <!-- ✅ STEP 4: LINK YOUR CSS FILE (styles.css)
+         INSTRUCTION: Remove the comment marks around the next line when your styles.css exists.
+         - rel="stylesheet" tells the browser this file contains CSS.
+         - href="styles.css" must match the exact filename.
+    -->
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- ✅ STEP 5: LINK YOUR JS FILE (script.js) USING defer
+         INSTRUCTION: Remove the comment marks around the next line when your script.js exists.
+         - defer waits for the HTML to load before running JS (prevents null element errors).
+    -->
   </head>
-  <body></body>
+  <body>
+    <main id="app" role="main" aria-label="Language preference demo">
+      <!-- ✅ STEP 6: ADD A LABEL for the dropdown
+           INSTRUCTION:
+           - Create a <label> element with text: “Choose your language:”.
+           - Add for="languageSelect" so the label is connected to the <select> by id.
+      -->
+      <label for="languageSelect">Choose your language: </label>
+
+      <!-- ✅ STEP 7: ADD THE <select> DROPDOWN
+           INSTRUCTION:
+           - Create a <select> element with id="languageSelect" and name="language".
+           - Inside it, add these <option> elements with these EXACT values:
+               <option value="en">English</option>
+               <option value="es">Spanish</option>
+               <option value="fr">French</option>
+               <option value="de">German</option>
+               <option value="ja">Japanese</option>  (ISO code is 'ja', not 'jp')
+           - The option “value” is what we’ll save in localStorage.
+      -->
+
+      <select id="languageSelect" name="language">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="ja">Japanese</option>
+      </select>
+
+      <!-- ✅ STEP 8: ADD A PARAGRAPH to show a message in the chosen language
+           INSTRUCTION:
+           - Create a <p> element with id="message".
+           - Add aria-live="polite" so screen readers politely announce updates.
+      -->
+      <p id="message" aria-live="polite"></p>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

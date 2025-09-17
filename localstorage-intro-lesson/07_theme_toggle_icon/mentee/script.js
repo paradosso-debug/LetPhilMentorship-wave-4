@@ -17,3 +17,19 @@
 const toggleBtn = document.getElementById("toggleThemeBtn");
 const themeIcon = document.getElementById("themeIcon");
 const body = document.body;
+
+const savedTheme = localStorage.getItem("pageTheme");
+
+if (savedTheme === "dark") {
+  body.classList.add("dark");
+  themeIcon.textContent = "☀️";
+} else {
+  themeIcon.textContent = "🌙";
+}
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  const currTheme = body.classList.contains("dark") ? "dark" : "light";
+  localStorage.setItem("pageTheme", currTheme);
+  themeIcon.textContent = currTheme === "dark" ? "☀️" : "🌙";
+});
