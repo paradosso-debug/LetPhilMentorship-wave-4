@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff5e1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+select, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
