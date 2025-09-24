@@ -23,3 +23,21 @@
 // - We use backticks and ${} to insert dynamic values
 
 // 🧠 STEP 8: Show an error message if the fetch fails
+
+const cryptoSelect = document.getElementById("cryptoSelect");
+const checkBtn = document.getElementById("checkBtn");
+const priceDisplay = document.getElementById("priceDisplay");
+
+checkBtn.addEventListener("click", async () => {
+  const crypto = cryptoSelect.value;
+
+  const url = `https://api.coingecko.com/api/v3/simple/price?ids=${crypto}&vs_currencies=usd`;
+
+  try {
+    const response = await axios.get(url);
+    const price = response.data[crypto].usd;
+    priceDisplay.innerHTML = `<h2>${crypto.toUpperCase()}</h2> <p>Current price: ${price}</p>`;
+  } catch (error) {
+    priceDisplay.innerHTML = `<p style='color:red; font:bold'>Failed to look up crypto</p>`;
+  }
+});
