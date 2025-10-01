@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:#0b1220; color:#e9eef7; }
+.header { padding: 1.5rem; border-bottom: 1px solid #223; }
+.title { margin: 0 0 .25rem 0; font-size: 1.5rem; }
+.subtitle { margin: 0; color:#a9b4c7; }
+.controls { display:flex; align-items:center; gap:1rem; padding:1rem 1.5rem; flex-wrap: wrap; }
+.btn { padding: .5rem .9rem; border: 1px solid #39455f; background: #15203a; color:#e9eef7; border-radius: .6rem; cursor: pointer; }
+.input { padding: .5rem .7rem; border:1px solid #39455f; background:#0b1427; color:#e9eef7; border-radius:.6rem; min-width: 14rem; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.grid { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; padding:1rem 1.5rem; }
+.panel { background:#0e1a33; border:1px solid #1c2740; border-radius: .8rem; padding:1rem; }
+.panel-title { margin-top:0; }
+.list { list-style:none; padding:0; margin:0; display:flex; flex-direction: column; gap:.5rem; max-height: 70vh; overflow:auto; }
+.poke-btn, .ability-btn { width:100%; text-align:left; padding:.6rem .8rem; border:1px solid #2a3654; background:#122244; color:#e9eef7; border-radius:.5rem; cursor:pointer; }
+.detail { min-height: 4rem; }
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}

@@ -41,3 +41,4 @@ checkBtn.addEventListener("click", async () => {
     priceDisplay.innerHTML = `<p style='color:red; font:bold'>Failed to look up crypto</p>`;
   }
 });
+
