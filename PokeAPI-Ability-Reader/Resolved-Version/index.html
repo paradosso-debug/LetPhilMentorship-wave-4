@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéAPI — Pokémon Browser (Mentor)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="title">Pokémon Browser</h1>
+      <p class="subtitle">Paginate the list and view abilities (click an ability for detail)</p>
+    </header>
+
+    <section class="controls">
+      <div class="pager">
+        <button id="prevBtn" type="button" class="btn" aria-label="Previous page">Prev</button>
+        <button id="nextBtn" type="button" class="btn" aria-label="Next page">Next</button>
+      </div>
+      <div class="pager">
+        <button id="limit20Btn" type="button" class="btn">20 per page</button>
+        <button id="limit50Btn" type="button" class="btn">50 per page</button>
+        <button id="limit100Btn" type="button" class="btn">100 per page</button>
+      </div>
+      <div class="pager">
+        <input id="pageInput" class="input" placeholder="Go to page #" aria-label="Page number" />
+        <button id="goPageBtn" type="button" class="btn">Go</button>
+        <span id="pageLabel" class="label" aria-live="polite" style="min-width:14ch;"></span>
+      </div>
+      <div class="pager">
+        <input id="pokeNameInput" class="input" placeholder="e.g., pikachu" aria-label="Pokémon name" />
+        <button id="loadPokeBtn" type="button" class="btn">Load Pokémon by Name</button>
+      </div>
+    </section>
+
+    <main class="grid">
+      <section class="panel">
+        <h2 class="panel-title">Pokémon (Paginated)</h2>
+        <ul id="pokemonList" class="list" aria-live="polite"></ul>
+      </section>
+
+      <section class="panel">
+        <h2 class="panel-title">Details</h2>
+        <div id="detailPanel" class="detail" aria-live="polite">
+          <em>Select a Pokémon from the list or search by name.</em>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
